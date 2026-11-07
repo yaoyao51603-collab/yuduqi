@@ -1,0 +1,68 @@
+.cover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+  border-radius: 4px 8px 8px 4px;
+  background: #e9dfcc;
+  box-shadow:
+    0 1px 2px rgba(33, 30, 25, 0.12),
+    0 8px 18px -8px rgba(33, 30, 25, 0.28);
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.fallback {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  padding: 14px 12px;
+  background: #e9dfcc;
+  color: #3b3327;
+}
+
+.spine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 7px;
+  background: rgba(33, 30, 25, 0.14);
+}
+
+.character {
+  max-height: 62%;
+  overflow: hidden;
+  font-family: var(--font-serif);
+  font-size: clamp(26px, 8vw, 34px);
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  line-height: 1.25;
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+}
+
+.rule {
+  width: 18px;
+  height: 1px;
+  background: rgba(33, 30, 25, 0.35);
+}
+
+.author {
+  max-width: 100%;
+  overflow: hidden;
+  color: #6b6355;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

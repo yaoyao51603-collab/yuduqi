@@ -1,0 +1,130 @@
+.body {
+  padding: 0 0 16px;
+}
+
+.group {
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--reader-line, var(--line));
+}
+
+.group:last-child {
+  border-bottom: 0;
+}
+
+.groupHead {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.label {
+  color: var(--reader-ink, var(--ink));
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hint {
+  color: var(--reader-muted, var(--ink-3));
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+}
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--reader-line, var(--line));
+  border-radius: 10px;
+}
+
+.stepButton {
+  width: 44px;
+  height: 40px;
+  border: 0;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--reader-ink, var(--ink));
+  font-size: 20px;
+  line-height: 1;
+}
+
+.stepButton:disabled {
+  opacity: 0.35;
+}
+
+.stepValue {
+  flex: 1;
+  text-align: center;
+  color: var(--reader-ink, var(--ink));
+  font-size: 16px;
+  font-variant-numeric: tabular-nums;
+}
+
+.segments {
+  display: flex;
+  gap: 6px;
+}
+
+.segment {
+  flex: 1;
+  min-height: 40px;
+  border: 1px solid var(--reader-line, var(--line));
+  border-radius: 8px;
+  background: transparent;
+  color: var(--reader-ink, var(--ink));
+  font-size: 14px;
+}
+
+.segment[data-selected] {
+  border-color: var(--reader-accent, var(--accent));
+  background: color-mix(in srgb, var(--reader-accent, var(--accent)) 10%, transparent);
+  color: var(--reader-accent, var(--accent));
+  font-weight: 600;
+}
+
+.themes {
+  display: flex;
+  gap: 8px;
+}
+
+.themeButton {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 8px;
+  border: 1px solid var(--reader-line, var(--line));
+  border-radius: 10px;
+  background: transparent;
+  color: var(--reader-muted, var(--ink-3));
+  font-size: 12px;
+}
+
+.themeButton[data-selected] {
+  border-color: var(--reader-accent, var(--accent));
+  color: var(--reader-accent, var(--accent));
+  font-weight: 600;
+}
+
+.swatch {
+  width: 34px;
+  height: 34px;
+  border: 1px solid rgba(33, 30, 25, 0.18);
+  border-radius: 50%;
+}
+
+.themeButton[data-theme-option='paper'] .swatch {
+  background: #fbf9f3;
+}
+
+.themeButton[data-theme-option='sepia'] .swatch {
+  background: #f3e9d6;
+}
+
+.themeButton[data-theme-option='night'] .swatch {
+  background: #121110;
+  border-color: rgba(217, 211, 199, 0.3);
+}

@@ -1,0 +1,249 @@
+.page {
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 560px;
+  min-height: 100dvh;
+  margin: 0 auto;
+  padding: calc(env(safe-area-inset-top) + 24px) 20px calc(env(safe-area-inset-bottom) + 32px);
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.brandBlock {
+  min-width: 0;
+}
+
+.brand {
+  margin: 0;
+  color: var(--ink);
+  font-family: var(--font-serif);
+  font-size: 30px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  line-height: 1.2;
+}
+
+.subtitle {
+  margin: 6px 0 0;
+  color: var(--ink-3);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+}
+
+.importButton {
+  display: inline-flex;
+  flex: none;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+  min-height: var(--tap);
+  padding: 0 16px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 8px rgba(140, 74, 47, 0.18);
+}
+
+.importButton:disabled {
+  opacity: 0.6;
+}
+
+.fileInput {
+  display: none;
+}
+
+.loading {
+  margin: 48px 0;
+  color: var(--ink-3);
+  font-size: 14px;
+  text-align: center;
+}
+
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 52px 8px 32px;
+  text-align: center;
+}
+
+.emptyIcon {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--paper-raised);
+  color: var(--accent);
+}
+
+.emptyTitle {
+  margin: 20px 0 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.emptyText {
+  max-width: 300px;
+  margin: 8px 0 0;
+  color: var(--ink-3);
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.emptyActions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  max-width: 280px;
+  margin-top: 28px;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: var(--tap);
+  padding: 0 18px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.primaryButton {
+  border: 0;
+  background: var(--accent);
+  color: #fff;
+}
+
+.secondaryButton {
+  border: 1px solid var(--line);
+  background: transparent;
+  color: var(--ink);
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.6;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  min-width: 0;
+}
+
+.cardLink {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  border: 0;
+  border-radius: 6px;
+  background: transparent;
+}
+
+.cardLink:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.more {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  border: 0;
+  border-radius: 50%;
+  background: rgba(251, 249, 243, 0.92);
+  color: var(--ink);
+  box-shadow: 0 1px 4px rgba(33, 30, 25, 0.14);
+}
+
+.more:active {
+  background: #efe9dc;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  margin-top: 10px;
+  padding: 0 2px;
+}
+
+.title {
+  display: -webkit-box;
+  overflow: hidden;
+  color: var(--ink);
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 1.45;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+.meta {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: space-between;
+  color: var(--ink-3);
+  font-size: 12px;
+}
+
+.author {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.percent {
+  flex: none;
+  color: var(--accent);
+  font-variant-numeric: tabular-nums;
+}
+
+.footnote {
+  margin: 36px 0 0;
+  color: var(--ink-3);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+@media (hover: hover) {
+  .primaryButton:hover,
+  .importButton:hover {
+    background: #7a3f27;
+  }
+
+  .secondaryButton:hover {
+    border-color: var(--ink-3);
+  }
+
+  .card:hover .title {
+    color: var(--accent);
+  }
+}

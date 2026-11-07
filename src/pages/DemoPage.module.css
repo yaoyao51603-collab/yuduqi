@@ -1,0 +1,7 @@
+.demo {
+  display: grid;
+  min-height: 100dvh;
+  place-items: center;
+  color: var(--ink-3);
+  font-size: var(--text-sm);
+}

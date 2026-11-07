@@ -1,0 +1,223 @@
+.reader {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--reader-bg);
+  color: var(--reader-ink);
+  overscroll-behavior: none;
+}
+
+.stage {
+  position: absolute;
+  inset: 0;
+  box-sizing: border-box;
+  padding-top: calc(env(safe-area-inset-top) + 52px);
+  padding-bottom: calc(env(safe-area-inset-bottom) + 48px);
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  display: grid;
+  place-items: center;
+  background: var(--reader-bg);
+  color: var(--reader-muted);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+}
+
+.errorLayer {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  background: var(--reader-bg);
+}
+
+.errorCard {
+  width: min(300px, 100%);
+  padding: 24px 20px 20px;
+  border: 1px solid var(--reader-line);
+  border-radius: 14px;
+  background: var(--reader-surface);
+  text-align: center;
+}
+
+.errorText {
+  margin: 0;
+  color: var(--reader-ink);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.errorButton {
+  min-height: var(--tap);
+  margin-top: 18px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--reader-accent);
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.topbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  gap: 2px;
+  align-items: center;
+  min-height: 52px;
+  padding: calc(env(safe-area-inset-top) + 4px) 6px 4px;
+  border-bottom: 1px solid var(--reader-line);
+  background: var(--reader-chrome);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  padding: 8px 14px calc(env(safe-area-inset-bottom) + 10px);
+  border-top: 1px solid var(--reader-line);
+  background: var(--reader-chrome);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.topbar.hidden {
+  transform: translateY(-100%);
+}
+
+.footer.hidden {
+  transform: translateY(100%);
+}
+
+.iconButton {
+  display: grid;
+  flex: none;
+  place-items: center;
+  width: var(--tap);
+  height: var(--tap);
+  border: 0;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--reader-ink);
+}
+
+.iconButton:active {
+  background: color-mix(in srgb, var(--reader-accent) 12%, transparent);
+}
+
+.titles {
+  flex: 1;
+  min-width: 0;
+  padding: 0 4px;
+  text-align: left;
+}
+
+.bookTitle {
+  margin: 0;
+  overflow: hidden;
+  color: var(--reader-ink);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chapter {
+  min-height: 14px;
+  margin: 1px 0 0;
+  overflow: hidden;
+  color: var(--reader-muted);
+  font-size: 11px;
+  line-height: 1.4;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.progressRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.slider {
+  flex: 1;
+  height: 28px;
+  margin: 0;
+  background: transparent;
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.slider::-webkit-slider-runnable-track {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--reader-line);
+}
+
+.slider::-webkit-slider-thumb {
+  width: 16px;
+  height: 16px;
+  margin-top: -6.5px;
+  border: 2px solid var(--reader-chrome);
+  border-radius: 50%;
+  background: var(--reader-accent);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.18);
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.slider::-moz-range-track {
+  height: 3px;
+  border-radius: 2px;
+  background: var(--reader-line);
+}
+
+.slider::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--reader-chrome);
+  border-radius: 50%;
+  background: var(--reader-accent);
+}
+
+.percent {
+  min-width: 40px;
+  color: var(--reader-muted);
+  font-size: 12px;
+  font-variant-numeric: tabular-nums;
+  text-align: right;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .topbar,
+  .footer {
+    transition: none;
+  }
+}

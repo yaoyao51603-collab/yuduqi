@@ -1,0 +1,50 @@
+.list {
+  margin: 0;
+  padding: 0 0 12px;
+  list-style: none;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  min-height: var(--tap);
+  padding: 10px 16px;
+  border: 0;
+  border-left: 3px solid transparent;
+  background: transparent;
+  color: var(--reader-ink);
+  font-size: 15px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+.item[data-current] {
+  border-left-color: var(--reader-accent);
+  color: var(--reader-accent);
+  background: color-mix(in srgb, var(--reader-accent) 8%, transparent);
+  font-weight: 600;
+}
+
+.label {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.current {
+  flex: none;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+}
+
+.empty {
+  margin: 0;
+  padding: 8px 4px 24px;
+  color: var(--reader-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
