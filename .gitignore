@@ -12,6 +12,13 @@ node_modules/
 dist/
 build/
 *.log
+.pnpm-store/
+
+# 测试产物
+coverage/
+test-results/
+playwright-report/
+blob-report/
 
 # Python
 __pycache__/

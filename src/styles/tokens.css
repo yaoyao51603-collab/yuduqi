@@ -1,0 +1,96 @@
+:root {
+  color-scheme: light;
+
+  /* 字体：中文系统字体栈，阅读正文可用宋体 */
+  --font-ui: "PingFang SC", "HarmonyOS Sans SC", "MiSans", "Source Han Sans SC",
+    "Noto Sans SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+  --font-serif: "Songti SC", "STSong", "Noto Serif SC", "Source Han Serif SC", "SimSun",
+    serif;
+
+  /* 字号阶梯 */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-lg: 20px;
+  --text-xl: 24px;
+  --text-2xl: 32px;
+
+  /* 间距：4 的倍数 */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+
+  /* 圆角 */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-full: 999px;
+
+  /* 纸墨色板 */
+  --paper: #fbf9f3;
+  --paper-raised: #fffdf8;
+  --paper-sunken: #f3efe5;
+  --ink: #211e19;
+  --ink-2: #4a443a;
+  --ink-3: #6b6355;
+  --line: rgba(33, 30, 25, 0.1);
+  --line-strong: rgba(33, 30, 25, 0.18);
+  --accent: #8c4a2f;
+  --accent-strong: #743a22;
+  --accent-soft: rgba(140, 74, 47, 0.1);
+  --danger: #a33a2e;
+  --danger-soft: rgba(163, 58, 46, 0.1);
+
+  --shadow-sm: 0 1px 2px rgba(33, 30, 25, 0.06);
+  --shadow-md: 0 8px 24px rgba(33, 30, 25, 0.08);
+  --shadow-lg: 0 16px 48px rgba(33, 30, 25, 0.18);
+
+  /* 点击区 */
+  --tap: 44px;
+
+  /* 设备安全区 */
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --safe-left: env(safe-area-inset-left, 0px);
+  --safe-right: env(safe-area-inset-right, 0px);
+
+  --duration-fast: 140ms;
+  --duration-base: 200ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+/* 阅读主题：仅供阅读器容器使用 */
+[data-reader-theme='paper'] {
+  --reader-bg: #fbf9f3;
+  --reader-ink: #211e19;
+  --reader-muted: #6b6355;
+  --reader-line: rgba(33, 30, 25, 0.12);
+  --reader-chrome: #fbf9f3;
+  --reader-surface: #fffdf8;
+  --reader-accent: #8c4a2f;
+}
+
+[data-reader-theme='sepia'] {
+  --reader-bg: #f3e9d6;
+  --reader-ink: #2b2419;
+  --reader-muted: #6a5c42;
+  --reader-line: rgba(43, 36, 25, 0.14);
+  --reader-chrome: #f3e9d6;
+  --reader-surface: #f8efdd;
+  --reader-accent: #8c4a2f;
+}
+
+[data-reader-theme='night'] {
+  --reader-bg: #121110;
+  --reader-ink: #d9d3c7;
+  --reader-muted: #969083;
+  --reader-line: rgba(217, 211, 199, 0.14);
+  --reader-chrome: #1a1816;
+  --reader-surface: #201d1a;
+  --reader-accent: #d9a585;
+}
